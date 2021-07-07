@@ -17,7 +17,7 @@ function digitBtnHandler(){
 };
 
 
-// 연산버튼 클릭 시
+//연산해주는 함수
 function calculate(operator, val1, val2){
     if(operator === '+'){
         return val1 + val2;
@@ -30,26 +30,27 @@ function calculate(operator, val1, val2){
     }
 }
 
-
-// = 클릭 시
+// 연산버튼 클릭 시
 function operatorBtnHandler(){
-    const operatorBtns = document.querySelectorAll('.operator');
-    operatorBtns.forEach(operatorBtn => {
-        operatorBtn.addEventListener('click', (evt) => {
-            const display =document.querySelector('.display');
-            let displayVal =Number(display.value);
+    const operatorBtns= document.querySelectorAll('.operator');
+    operatorBtns.forEach(operatorBtn =>{
+        
+        operatorBtn.addEventListener('click', (evt) =>{
+            const display = document.querySelector('.display');
+            let displayVal = Number(display.value);
+
             if(evt.target.innerText === '='){
                 display.value = calculate(currentOp, currentVal, displayVal);
-                currentOp ='';
+                currentOp='';
                 return;
             }
-            if (currentOp === ''){
-                currentVal =Number(display.value);
+            if(currentOp === ''){
+                currentVal = Number(display.value);
             }else{
                 currentVal =calculate(currentOp, currentVal, displayVal);
             }
-            display.value = '';
-            currentOp =evt.target.innerText;
+            display.value='';
+            currentOp=evt.target.innerText;
         })
     })
 }
