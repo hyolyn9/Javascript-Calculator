@@ -54,3 +54,7 @@ function operatorBtnHandler(){
         })
     })
 }
+
+function clearBtnHandler(){
+    const clearBtn = document.querySelector('.clear');
+}
