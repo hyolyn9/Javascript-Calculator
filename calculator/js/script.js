@@ -55,6 +55,12 @@ function operatorBtnHandler(){
     })
 }
 
+
+function operatorBtnHandler(){
+    const operatorBtns
+}
+
+
 function clearBtnHandler(){
     const clearBtn = document.querySelector('.clear');
 }
