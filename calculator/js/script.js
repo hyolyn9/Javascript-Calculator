@@ -57,7 +57,7 @@ function operatorBtnHandler(){
 
 
 function operatorBtnHandler(){
-    const operatorBtns
+    const operatorBtns=document.querySelectorAll('.operator');
 }
 
 
