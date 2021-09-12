@@ -12,6 +12,7 @@
 
 const canvas = document.getElementById("jsCanvas");
 const ctx =canvas.getContext("2d"); //context사용
+const colors= document.getElementsByClassName("jsColor");
 
 canvas.width=700;
 canvas.height =700;
@@ -59,3 +60,6 @@ if(canvas){
     canvas.addEventListener("mouseup", stopPainting);
     canvas.addEventListener("mouseleave",stopPainting);
 }
+
+console.log(Array.from(colors));
+//array.from 메소드는 object로 부터 array를 만든다.
