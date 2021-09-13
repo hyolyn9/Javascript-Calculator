@@ -44,14 +44,10 @@ function onMouseMove(event){
     }
 }
 
-function onMouseDown(event){
-   painting=true;
-    
-}
 
-
-function onMouseLeave(){
-    painting=false;
+function handleColorClick(event){
+    const color=event.target.style.backgroundColor;
+    ctx.strokeStyle=color;
 }
 
 if(canvas){
@@ -63,3 +59,5 @@ if(canvas){
 
 console.log(Array.from(colors));
 //array.from 메소드는 object로 부터 array를 만든다.
+Array.from(colors).forEach(color => color.addEventListener("click", handleColorClick));
+//color를 감자로해도 상관없음... 그냥 array안에 있는 각각의 아이템들을 대표하는 것뿐.
